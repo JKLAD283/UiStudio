@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <head>
+    <title>Welcome to Ui Studio! Build your Ui apps! Download FREE Windows app.</title>
+  </head>
+  <body>
+    <h1>Welcome to Ui Studio! Build your Ui apps! Download FREE Windows app.</h1>
+    <button>Download</button>
+    <script>
+      // Sayfadaki tüm butonları seçiyoruz
+  const buttons = document.querySelectorAll('button');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Görünmez bir link oluşturup tıklama tetikliyoruz
+      const link = document.createElement('a');
+      link.href = 'Ui Studio.zip'; // Dosya yolu
+      link.download = 'Ui Studio.zip'; // İndirilecek dosya adı
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  });
+    </script>
+  </body>
+</html>
